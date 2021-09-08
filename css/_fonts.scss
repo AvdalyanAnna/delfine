@@ -1,0 +1,21 @@
+$regular: 'FiraSans-Regular';
+$medium:'FiraSans-Medium';
+$bold:'FiraSans-Bold';
+
+@font-face {
+  font-family: 'FiraSans-Bold';
+  src: url('../fonts/FiraSans-Bold.ttf');
+  src: url('../fonts/FiraSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FiraSans-Regular';
+  src: url('../fonts/FiraSans-Regular.ttf');
+  src: url('../fonts/FiraSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FiraSans-Medium';
+  src: url('../fonts/FiraSans-Medium.ttf');
+  src: url('../fonts/FiraSans-Medium.ttf') format('truetype');
+}
