@@ -280,6 +280,7 @@ body {
     visibility: hidden;
     transition: height, padding-top 0.5s ease,
     opacity, visibility 1s ease;
+    overflow: hidden;
     //@include transition();
   }
 
@@ -1181,12 +1182,15 @@ body {
     }
 
     .services-body {
-      height: 80vh;
-      overflow-y: scroll;
-      scrollbar-width: none; /* Firefox */
-      &::-webkit-scrollbar {
-        display: none;
+      @media screen and (min-width: 768px) {
+        height: 80vh;
+        overflow-y: scroll;
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
+
     }
   }
 }
@@ -2820,15 +2824,18 @@ body {
     }
 
     &-single {
-      &,
-      .fp-tableCell {
-        min-height: auto;
-      }
+      min-height: 100vh;
+      box-sizing: border-box;
 
-      .services-body {
-        overflow-y: unset;
-        height: auto;
-      }
+    //  &,
+    //  .fp-tableCell {
+    //    min-height: auto;
+    //  }
+    //
+    //  .services-body {
+    //    overflow-y: unset;
+    //    height: auto;
+    //  }
     }
 
     &-inner {
@@ -2952,7 +2959,7 @@ body {
   }
 
   .company {
-   > .description{
+     .description{
       &:nth-child(1){
         padding-top: 300px;
       }
@@ -2960,6 +2967,7 @@ body {
       padding-top: 0;
     }
   }
+
   .list-shadow{
     &__link{
       font-size: 12px;
@@ -2972,6 +2980,7 @@ body {
       }
     }
   }
+
   .d-flex{
     flex-direction: column;
     img{
