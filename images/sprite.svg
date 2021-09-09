@@ -186,9 +186,23 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.21794 22.1229C0.413862 20.1817 1.07518e-05 18.1012 1.09355e-05 16L0.000986544 16C1.60469 23.1431 7.98536 28.4799 15.6125 28.4799C15.742 28.4799 15.8712 28.4783 16 28.4753L16 32C13.8989 32 11.8183 31.5861 9.87707 30.7821C7.93586 29.978 6.17203 28.7994 4.6863 27.3137C3.20056 25.828 2.02201 24.0641 1.21794 22.1229Z" fill="#4095DE"/>
         <rect x="25" y="14" width="4" height="18" transform="rotate(90 25 14)" fill="#4095DE"/>
     </svg>
+
     <svg id="calendar"  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7 11H9V13H7V11ZM7 15H9V17H7V15ZM11 11H13V13H11V11ZM11 15H13V17H11V15ZM15 11H17V13H15V11ZM15 15H17V17H15V15Z" fill="#908CA8"/>
         <path d="M5 22H19C20.103 22 21 21.103 21 20V6C21 4.897 20.103 4 19 4H17V2H15V4H9V2H7V4H5C3.897 4 3 4.897 3 6V20C3 21.103 3.897 22 5 22ZM19 8L19.001 20H5V8H19Z" fill="#908CA8"/>
+    </svg>
+
+    <svg id="video_play_btn" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="30" height="30" fill="url(#paint0_linear)"/>
+        <path d="M21 16L13.5 20.3301L13.5 11.6699L21 16Z" fill="white"/>
+        <rect x="1" y="1" width="30" height="30" stroke="white" stroke-width="2"/>
+        <defs>
+            <linearGradient id="paint0_linear" x1="32" y1="0" x2="-2.97622" y2="2.78535" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#155AA7"/>
+                <stop offset="0.270833" stop-color="#4095DE"/>
+                <stop offset="1" stop-color="#241C52"/>
+            </linearGradient>
+        </defs>
     </svg>
 
 

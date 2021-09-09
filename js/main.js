@@ -1,13 +1,12 @@
-
 $(function () {
     $('.hamburger').on('click', () => {
         $('.hamburger button').toggleClass('animate')
         $('.nav').toggleClass('active')
-        $('body.home').toggleClass('overflow-hidden')
+        $('body').toggleClass('overflow-hidden-important')
     })
 
     // initiate full page scroll
-    if($('body').is('.home')){
+    if ($('body').is('.home')) {
         $("#fullpage").fullpage({
             scrollBar: true,
             responsiveWidth: 768,
@@ -16,9 +15,9 @@ $(function () {
             // anchors: ["home", "about", "portfolio", "contact", "connect"],
             // menu: "#myMenu",
             fitToSection: false,
-            afterLoad:  (anchorLink, index) => {
+            afterLoad: (anchorLink, index) => {
                 //using index
-                if($('body').hasClass('home')){
+                if ($('body').hasClass('home')) {
                     if (index === 1) {
                         /* add opacity to arrow */
                         $('.header').removeClass('header-active')
@@ -48,19 +47,31 @@ $(function () {
         });
 
         // move section down one
-        $(document).on("click", ".scroll",   () => {
+        $(document).on("click", ".scroll", () => {
             $.fn.fullpage.moveSectionDown();
         });
 
     }
 
-    if($('div').is('.accordion-head')){
-        $('.accordion-head').on('click',function (){
+    if ($('div').is('.accordion-head')) {
+        $('.accordion-head').on('click', function () {
             $(this).parent().toggleClass('accordion-active')
         })
     }
+    if ($('div').is('.video-list')) {
+        $('.btn-play').on('click', function (e) {
+            e.preventDefault();
+            let iframe = $(this).parent().children('iframe')
 
+            let symbol = iframe[0].src.includes("autoplay=0") > -1
+                ? iframe[0].src.slice(0, -1) + "1"
+                : false;
 
+            let video = iframe[0].src = symbol;
+
+            console.log(video)
+        })
+    }
 
 
     //
