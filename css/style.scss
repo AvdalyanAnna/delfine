@@ -672,6 +672,7 @@ body {
     height: 60px;
     background: linear-gradient(136.4deg, #FCFEFF 0%, #FFFFFF 102.56%);
     box-shadow: 3px 3px 15px rgba(211, 209, 215, 0.6);
+    box-sizing: border-box;
 
     &:nth-child(3) {
       padding: 0;
@@ -1342,7 +1343,7 @@ body {
     margin: 10px 0;
   }
 
-  &.single-contact {
+  &-single {
     .btn {
       color: #fff;
       background: linear-gradient(265.45deg, #155AA7 0%, #4095DE 27.59%, #241C52 101.88%);
@@ -1514,7 +1515,7 @@ body {
         font: 600 18px/32px $bold;
         letter-spacing: 0.05em;
         color: #221952;
-        padding-left: 25px;
+        padding: 10px 0 10px 25px;
 
         span {
           font-weight: 400;
@@ -2034,7 +2035,8 @@ body {
     }
 
     &-item {
-      max-width: 100px;
+      max-width: 132px;
+      height: 80px;
     }
   }
 
@@ -2058,14 +2060,17 @@ body {
   }
   .partners {
     &-list {
-      max-width: 100%;
+      max-width: calc(100% + 20px);
       flex-wrap: wrap;
       justify-content: flex-start;
-      margin: 10px 0;
+      overflow: hidden;
+      margin: 10px 0 10px -10px;
     }
 
     &-item {
+      max-width: 120px;
       margin: 5px 10px;
+
     }
   }
   .news-item {
@@ -2335,6 +2340,11 @@ body {
     .map {
       width: 100%;
     }
+    &-single{
+      .contact-body{
+        flex-direction: column;
+      }
+    }
   }
 
   .section_one__info {
@@ -2601,6 +2611,7 @@ body {
       border-radius: 0;
       flex-direction: column;
       position: relative;
+      min-height: auto;
 
       .bg {
         width: 100%;
@@ -2609,10 +2620,14 @@ body {
       }
     }
 
+    &-inner {
+      height: auto;
+    }
+
     &-info {
       width: 100%;
       padding: 75px 15px 0;
-      min-height: 870px;
+      min-height: 1065px;
 
       .description {
         padding-top: 300px;
@@ -2670,10 +2685,6 @@ body {
 
       .title {
         text-align: center;
-      }
-
-      .description {
-        padding-top: 250px;
       }
 
       .uniqueness-inner {
@@ -2800,7 +2811,8 @@ body {
       .fp-tableCell {
         min-height: auto;
       }
-      .services-body{
+
+      .services-body {
         overflow-y: unset;
         height: auto;
       }
@@ -2808,6 +2820,7 @@ body {
 
     &-inner {
       padding: 80px 0;
+      min-height: auto;
     }
 
     &-title {
@@ -2865,6 +2878,14 @@ body {
         background-image: url(../images/sprite.svg#an_experience-sub-title__light-mob);
       }
 
+    }
+
+    &-inner {
+      height: auto;
+    }
+
+    &-body {
+      height: auto;
     }
   }
 
