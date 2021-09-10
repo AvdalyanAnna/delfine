@@ -10,6 +10,10 @@
     <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
 </head>
 <body class="home">
+<div class="preloader">
+    <img  src="images/preloader.png" alt="preloader">
+</div>
+
 <!-- navbar header -->
 <header class="header header-active">
     <div class="wrapper">
@@ -130,7 +134,6 @@
 
 <!-- begin fullpage -->
 <div id="fullpage">
-
     <div class="section_one section" data-anchor="section_one">
         <div class="wrapper">
             <div class="section_one-inner">
@@ -171,7 +174,6 @@
                 <button class="btn">Узнать подробнее</button>
                 <div class="scroll"></div>
             </div>
-
         </div>
     </div>
 
@@ -190,12 +192,10 @@
                             Осуществляем сбор и анализ финансовой и бухгалтерской документации.
                             <br>
                             <br>
-
                             Подготавливаем ТЭО, бизнес-план и другие финансовые документы, в объеме, необходимом для
                             положительного решения банка по продукту.
                             Критерий оценки нашей работы - внедрили для Вас банковский продукт, Вам поступили деньги из
                             банка.
-
                         </p>
                         <div class="info">
                             <div class="info-logo"></div>
@@ -222,26 +222,42 @@
                 <div class="an_experience-body">
                     <ul class="an_experience-list">
                         <li class="an_experience-item an_experience-item-1">
+                            <div class="bg">
+                                <div class="bg-progress"></div>
+                                <div class="bg-icon"></div>
+                            </div>
                             <div class="number">
-                                15 <span>лет</span>
+                                <div class="counterUp">15</div> <span>лет</span>
                             </div>
                             <p>На рынке финансовых услуг</p>
                         </li>
                         <li class="an_experience-item an_experience-item-2">
+                              <div class="bg">
+                                <div class="bg-progress"></div>
+                                <div class="bg-icon"></div>
+                            </div>
                             <div class="number">
-                                2.5 <span>млрд. руб.</span>
+                                <div class="counterUp">2</div>.5 <span>млрд. руб.</span>
                             </div>
                             <p>Привлечено для наших клиентов в 2020 году</p>
                         </li>
                         <li class="an_experience-item an_experience-item-3">
+                             <div class="bg">
+                                <div class="bg-progress"></div>
+                                <div class="bg-icon"></div>
+                            </div>
                             <div class="number">
-                                10+ <span>млрд. руб.</span>
+                                <div class="counterUp">10</div>+ <span>млрд. руб.</span>
                             </div>
                             <p>Среднегодовой оборот наших клиентов</p>
                         </li>
                         <li class="an_experience-item an_experience-item-4">
+                            <div class="bg">
+                                <div class="bg-progress"></div>
+                                <div class="bg-icon"></div>
+                            </div>
                             <div class="number">
-                                90 <span>%</span>
+                                <div class="counterUp">90</div> <span>%</span>
                             </div>
                             <p>впервые обратившихся к нам клиентов обращаются повторно</p>
                         </li>
@@ -423,12 +439,15 @@
             </div>
         </div>
     </div>
-
 </div>
 <!--  end fullpage  -->
 
-<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/scrolloverflow.js"></script>
+<script src="js/jquery.rcounter-1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
+
 <script src="js/main.js"></script>
 </body>
 </html>

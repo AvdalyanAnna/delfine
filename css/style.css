@@ -101,6 +101,11 @@ body {
   body.home {
     background-color: #EEEEF1; }
 
+/*.fp-tableCell,
+.section{
+  height: auto!important;
+  min-height: 100vh;
+}*/
 .overflow-hidden {
   overflow: hidden !important; }
 
@@ -378,6 +383,20 @@ body {
     -o-transform:  translateY(-50%);
     transform:  translateY(-50%); }
 
+.preloader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: 0.2s;
+  background: #fff; }
+  .preloader img {
+    width: 40%; }
+
 /* --- Header Start --- */
 .header {
   position: fixed;
@@ -533,7 +552,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column; }
+    flex-direction: column;
+    color: #fff; }
     #fp-nav ul li {
       max-width: 100%;
       width: 100%;
@@ -818,27 +838,62 @@ body {
     justify-content: center;
     text-align: center;
     position: relative; }
-    .an_experience-item::before {
-      content: '';
+    .an_experience-item .bg {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 90%;
       background-image: url(../images/an_experience-fone.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
       z-index: 1; }
+      .an_experience-item .bg .bg-progress {
+        position: absolute;
+        width: 105%;
+        height: 105%;
+        background-image: url(../images/an_experience-fone__after.png);
+        left: -2%;
+        top: -2%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation: lds-dual-ring 2s linear infinite; }
+      .an_experience-item .bg .bg-icon {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        animation: lds-dual-ring 2s linear infinite; }
+        .an_experience-item .bg .bg-icon::before {
+          content: '';
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          background-image: url(../images/an_experience-fone__icon.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          top: 45%;
+          left: -6.5%;
+          z-index: 9; }
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
     .an_experience-item .number {
       font: 600 72px/40px "FiraSans-Bold";
       letter-spacing: 0.05em;
       color: #221952;
       position: relative;
-      z-index: 2; }
+      z-index: 2;
+      display: flex; }
       .an_experience-item .number span {
         position: absolute;
         font: 600 18px/40px "FiraSans-Bold";
         color: #4095DE;
-        top: -40px; }
+        top: -40px;
+        right: -25px; }
     .an_experience-item p {
       font: 500 18px/24px "FiraSans-Medium";
       letter-spacing: 0.05em;
@@ -854,24 +909,15 @@ body {
       left: 46px;
       width: 137px;
       letter-spacing: 0.05px; }
-    .an_experience-item-2::before {
-      -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-      -moz-transform: rotate(90deg);
-      -o-transform: rotate(90deg);
-      transform: rotate(90deg); }
-    .an_experience-item-3::before {
-      -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
-      transform: rotate(180deg); }
-    .an_experience-item-4::before {
-      -webkit-transform: rotate(270deg);
-      -ms-transform: rotate(270deg);
-      -moz-transform: rotate(270deg);
-      -o-transform: rotate(270deg);
-      transform: rotate(270deg); }
+    .an_experience-item-2 .bg .bg-progress,
+    .an_experience-item-2 .bg .bg-icon {
+      animation: lds-dual-ring 2.5s linear infinite; }
+    .an_experience-item-3 .bg .bg-progress,
+    .an_experience-item-3 .bg .bg-icon {
+      animation: lds-dual-ring 3s linear infinite; }
+    .an_experience-item-4 .bg .bg-progress,
+    .an_experience-item-4 .bg .bg-icon {
+      animation: lds-dual-ring 3.5s linear infinite; }
 
 /* ---  Section An Experience End  --- */
 /* --- Section Advantages Start --- */
@@ -1246,6 +1292,9 @@ body {
         -moz-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%); }
+        @media screen and (min-width: 768px) {
+          .uniqueness-body .bg img {
+            height: 60vh; } }
   .uniqueness-info {
     width: 70%;
     height: 75vh;
@@ -2396,6 +2445,9 @@ body {
     display: none !important; }
 
   .nav.active .nav__menu.show-mobile {
-    display: flex !important; } }
+    display: flex !important; }
+
+  .an_experience-item .bg .bg-icon::before {
+    left: -8.5%; } }
 
 /*# sourceMappingURL=style.css.map */

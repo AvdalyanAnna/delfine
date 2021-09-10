@@ -17,6 +17,12 @@ body {
   }
 }
 
+/*.fp-tableCell,
+.section{
+  height: auto!important;
+  min-height: 100vh;
+}*/
+
 .overflow-hidden {
   overflow: hidden !important;
 }
@@ -334,6 +340,23 @@ body {
 
 }
 
+.preloader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: 0.2s;
+  background: #fff;
+
+  img {
+    width: 40%;
+  }
+}
+
 /* --- Header Start --- */
 
 .header {
@@ -506,6 +529,7 @@ body {
   .contact-list {
     display: none;
   }
+
 }
 
 .nav-active {
@@ -565,6 +589,7 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    color:#fff;
 
 
     li {
@@ -935,16 +960,59 @@ body {
     text-align: center;
     position: relative;
 
-    &::before {
-      content: '';
+    .bg {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 90%;
       background-image: url(../images/an_experience-fone.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
       z-index: 1;
+
+      .bg-progress {
+        position: absolute;
+        width: 105%;
+        height: 105%;
+        background-image: url(../images/an_experience-fone__after.png);
+        left: -2%;
+        top: -2%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation: lds-dual-ring 2s linear infinite;
+      }
+
+      .bg-icon {
+        &::before{
+          content: '';
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          background-image: url(../images/an_experience-fone__icon.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          top: 45%;
+          left: -6.5%;
+          z-index: 9;
+        }
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        animation: lds-dual-ring 2s linear infinite;
+      }
+
+      @keyframes lds-dual-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
     }
 
     .number {
@@ -953,12 +1021,14 @@ body {
       color: #221952;
       position: relative;
       z-index: 2;
+      display: flex;
 
       span {
         position: absolute;
         font: 600 18px/40px $bold;
         color: #4095DE;
         top: -40px;
+        right: -25px;
       }
     }
 
@@ -977,6 +1047,7 @@ body {
       p {
         max-width: 170px;
       }
+
     }
 
     &-2,
@@ -988,25 +1059,33 @@ body {
           letter-spacing: 0.05px;
         }
       }
+
     }
 
     &-2 {
-      &::before {
-        @include prefix-name('transform', 'rotate(90deg)');
-
+      .bg{
+        .bg-progress,
+        .bg-icon{
+          animation: lds-dual-ring 2.5s linear infinite;
+        }
       }
     }
 
     &-3 {
-      &::before {
-        @include prefix-name('transform', 'rotate(180deg)');
-
+      .bg{
+        .bg-progress,
+        .bg-icon{
+          animation: lds-dual-ring 3s linear infinite;
+        }
       }
     }
 
     &-4 {
-      &::before {
-        @include prefix-name('transform', 'rotate(270deg)');
+      .bg{
+        .bg-progress,
+        .bg-icon{
+          animation: lds-dual-ring 3.5s linear infinite;
+        }
       }
     }
   }
@@ -1447,7 +1526,8 @@ body {
     max-width: 253px;
     width: 100%;
     margin: 10px 0;
-    &:hover{
+
+    &:hover {
       background: #EEEEF1;
     }
   }
@@ -1554,6 +1634,9 @@ body {
 
       img {
         position: absolute;
+        @media screen and (min-width: 768px) {
+          height: 60vh;
+        }
         top: 50%;
         left: 0;
         @include prefix-name('transform', 'translate(-50%, -50%)');
@@ -3365,19 +3448,22 @@ body {
     }
 
   }
-  .news-list{
+  .news-list {
     padding: 0 20px;
   }
   .advantages.advantages-single.advantages-video .advantages-inner {
     height: auto;
   }
-  #fp-nav{
+  #fp-nav {
     display: none !important;
   }
-  .nav__menu.show-mobile{
+  .nav__menu.show-mobile {
     display: none !important;
   }
-  .nav.active .nav__menu.show-mobile{
+  .nav.active .nav__menu.show-mobile {
     display: flex !important;
+  }
+  .an_experience-item .bg .bg-icon::before{
+    left: -8.5%;
   }
 }

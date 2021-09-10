@@ -35,12 +35,11 @@ $(function () {
         })
     }
 
-
-
     // initiate full page scroll
     if ($('body').is('.home')) {
         $("#fullpage").fullpage({
             scrollBar: true,
+            scrollOverflow: true,
             responsiveWidth: 768,
             navigation: true,
             navigationTooltips: ["Главная", "Уникальность", "Опыт", "Преимущества", "Услуги","Контакты"],
@@ -61,22 +60,6 @@ $(function () {
                         $('#fp-nav ').addClass('active')
                     }
                 }
-
-
-                //using index
-                // if (index == 2) {
-                //     /* animate skill bars */
-                //     $(".skillbar").each(function () {
-                //         $(this)
-                //             .find(".skillbar-bar")
-                //             .animate(
-                //                 {
-                //                     width: $(this).attr("data-percent")
-                //                 },
-                //                 2500
-                //             );
-                //     });
-                // }
             }
         });
 
@@ -87,36 +70,26 @@ $(function () {
 
     }
 
+    if ($('div').is('.preloader')) {
+        setTimeout(function () {
+            $('.preloader').css('transform', 'translateY(-100%)')
+        }, 500);
+    }
+
+    /*      Counter     */
+    $('.counterUp').rCounter();
 
 
-    // if ($('div').is('.video-list')) {
-    //     $('.btn-play').on('click', function (e) {
-    //         e.preventDefault();
-    //         let iframe = $(this).parent().children('iframe')
-    //
-    //         let symbol = iframe[0].src.includes("autoplay=0") > -1
-    //             ? iframe[0].src.slice(0, -1) + "1"
-    //             : false;
-    //
-    //         let video = iframe[0].src = symbol;
-    //
-    //         console.log(video)
-    //     })
-    // }
-    //
+    // $('.counterUp').counterUp({
+    //     delay: 10,
+    //     time: 1000,
+    //     offset: 70,
+    //     beginAt: 100,
+    //     formatter: function (n) {
+    //         return n.replace(/,/g, '.');
+    //     }
+    // });
 
-    //
-    // // fullpage.js link navigation
-    // $(document).on("click", "#skills", function () {
-    //     $.fn.fullpage.moveTo(2);
-    // });
-    //
-    // $(document).on("click", "#projects", function () {
-    //     $.fn.fullpage.moveTo(3);
-    // });
-    //
-    // $(document).on("click", "#contact", function () {
-    //     $.fn.fullpage.moveTo(4);
-    // });
+
 
 });
