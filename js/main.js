@@ -10,7 +10,7 @@ $(function () {
     }
 
     function init_map_center() {
-       var  myMap = new ymaps.Map("map", {
+        var myMap = new ymaps.Map("map", {
             center: [55.791059392084655, 37.633846758299825],
             zoom: 10,
             controls: []
@@ -36,60 +36,37 @@ $(function () {
     }
 
     // initiate full page scroll
-    if ($('body').is('.home')) {
-        $("#fullpage").fullpage({
-            scrollBar: true,
-            scrollOverflow: true,
-            responsiveWidth: 768,
-            navigation: true,
-            navigationTooltips: ["Главная", "Уникальность", "Опыт", "Преимущества", "Услуги","Контакты"],
-            anchors: ["section_one", "uniqueness", "an_experience", "advantages", "services","contact"],
-            menu: "#myMenu",
-            fitToSection: false,
-            afterLoad: (anchorLink, index) => {
-                //using index
-                if ($('body').hasClass('home')) {
-                    if (index === 1) {
-                        /* add opacity to arrow */
-                        $('.header').removeClass('header-active')
-                        $('.nav').removeClass('nav-active')
-                        $('#fp-nav ').removeClass('active')
-                    } else if (index !== 1) {
-                        $('.header').addClass('header-active')
-                        $('.nav').addClass('nav-active')
-                        $('#fp-nav ').addClass('active')
-                    }
-                }
-            }
-        });
 
-        // move section down one
-        $(document).on("click", ".scroll", () => {
-            $.fn.fullpage.moveSectionDown();
-        });
-
-    }
 
     if ($('div').is('.preloader')) {
-        setTimeout(function () {
+        setTimeout(() => {
             $('.preloader').css('transform', 'translateY(-100%)')
-        }, 500);
+        }, 1000);
     }
 
     /*      Counter     */
     $('.counterUp').rCounter();
 
 
-    // $('.counterUp').counterUp({
-    //     delay: 10,
-    //     time: 1000,
-    //     offset: 70,
-    //     beginAt: 100,
-    //     formatter: function (n) {
-    //         return n.replace(/,/g, '.');
-    //     }
-    // });
+    let flag = false;
+    $(window).on('resize scroll', () => {
+        onScroll();
+    })
 
-
-
+    function onScroll() {
+        if ($(window).width() > 1439 && !flag) {
+            if ($('body').is('.home')) {
+                $('.main-content').scroll3D();
+            }
+            flag = true;
+        } else {
+            if ($('.section_one').outerHeight() > window.scrollY) {
+                $('.header').removeClass('header-active')
+                $('.nav').removeClass('nav-active')
+            } else {
+                $('.header').addClass('header-active')
+                $('.nav').addClass('nav-active')
+            }
+        }
+    }
 });

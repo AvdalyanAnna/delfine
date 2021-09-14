@@ -7,15 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DELFIN</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.pageScroll3d.min.css">
     <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
 </head>
 <body class="home">
 <div class="preloader">
-    <img  src="images/preloader.png" alt="preloader">
+    <img src="images/preloader.png" alt="preloader">
 </div>
 
 <!-- navbar header -->
-<header class="header header-active">
+<header class="header ">
     <div class="wrapper">
         <div class="header__inner">
             <a href="index.html" class="header__logo logo">
@@ -37,14 +38,14 @@
                     <a href="faq.html" class="header__menu-link menu-link">Вопрос-ответ</a>
                 </li>
                 <li class="header__menu-item menu-item">
-                       <a href="contact.html" class="header__menu-link menu-link">Наши партнеры</a>
+                    <a href="contact.html" class="header__menu-link menu-link">Наши партнеры</a>
                 </li>
                 <li class="header__menu-item menu-item">
-                                              <a href="news.html" class="header__menu-link menu-link">Новости</a>
+                    <a href="news.html" class="header__menu-link menu-link">Новости</a>
 
                 </li>
                 <li class="header__menu-item menu-item">
-                        <a href="contact.html" class="header__menu-link menu-link">Контакты</a>
+                    <a href="contact.html" class="header__menu-link menu-link">Контакты</a>
                 </li>
             </ul>
         </div>
@@ -53,12 +54,12 @@
 <!-- end navbar header -->
 
 <!-- sidebar slider -->
-<nav class="nav nav-active">
+<nav class="nav ">
     <div class="nav-hamburger hamburger">
         <button></button>
     </div>
     <ul class="nav__menu menu show-mobile">
-         <li class="nav__menu-item menu-item menu-item__active">
+        <li class="nav__menu-item menu-item menu-item__active">
             <a href="index.html">Главная</a>
         </li>
         <li class="nav__menu-item menu-item">
@@ -74,6 +75,7 @@
             <a href="news.html">Новости</a>
         </li>
     </ul>
+    <div class="nav__menu-1"></div>
     <ul class="nav__social social">
         <li class="nav__social-item social-item">
             <a href="#" target="_blank" class="nav__social-link social-link youtube"></a>
@@ -132,9 +134,10 @@
 </nav>
 <!-- end navbar slider -->
 
-<!-- begin fullpage -->
-<div id="fullpage">
-    <div class="section_one section" data-anchor="section_one">
+<!-- begin main -->
+<main class="main-content">
+    <section class="section_one active">
+        <h1>Главная</h1>
         <div class="wrapper">
             <div class="section_one-inner">
                 <a href="#" class="logo">
@@ -175,9 +178,10 @@
                 <div class="scroll"></div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="uniqueness section" data-anchor="uniqueness">
+    <section class="uniqueness">
+        <h1>Уникальность</h1>
         <div class="wrapper">
             <div class="uniqueness-inner">
                 <div class="uniqueness-body">
@@ -210,9 +214,10 @@
                 <div class="scroll"></div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="an_experience section" data-anchor="an_experience">
+    <section class="an_experience">
+        <h1>Опыт</h1>
         <div class="wrapper">
             <div class="an_experience-inner">
                 <div class="an_experience-header">
@@ -227,27 +232,30 @@
                                 <div class="bg-icon"></div>
                             </div>
                             <div class="number">
-                                <div class="counterUp">15</div> <span>лет</span>
+                                <div class="counterUp">15</div>
+                                <span>лет</span>
                             </div>
                             <p>На рынке финансовых услуг</p>
                         </li>
                         <li class="an_experience-item an_experience-item-2">
-                              <div class="bg">
+                            <div class="bg">
                                 <div class="bg-progress"></div>
                                 <div class="bg-icon"></div>
                             </div>
                             <div class="number">
-                                <div class="counterUp">2</div>.5 <span>млрд. руб.</span>
+                                <div class="counterUp">2</div>
+                                .5 <span>млрд. руб.</span>
                             </div>
                             <p>Привлечено для наших клиентов в 2020 году</p>
                         </li>
                         <li class="an_experience-item an_experience-item-3">
-                             <div class="bg">
+                            <div class="bg">
                                 <div class="bg-progress"></div>
                                 <div class="bg-icon"></div>
                             </div>
                             <div class="number">
-                                <div class="counterUp">10</div>+ <span>млрд. руб.</span>
+                                <div class="counterUp">10</div>
+                                + <span>млрд. руб.</span>
                             </div>
                             <p>Среднегодовой оборот наших клиентов</p>
                         </li>
@@ -257,7 +265,8 @@
                                 <div class="bg-icon"></div>
                             </div>
                             <div class="number">
-                                <div class="counterUp">90</div> <span>%</span>
+                                <div class="counterUp">90</div>
+                                <span>%</span>
                             </div>
                             <p>впервые обратившихся к нам клиентов обращаются повторно</p>
                         </li>
@@ -266,9 +275,10 @@
                 <div class="scroll"></div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="advantages section" data-anchor="advantages">
+    <section class="advantages">
+        <h1>Преимущества</h1>
         <div class="wrapper">
             <div class="advantages-inner">
                 <div class="advantages-header">
@@ -314,9 +324,10 @@
                 <div class="scroll"></div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="services section" data-anchor="services">
+    <section class="services">
+        <h1>Услуги</h1>
         <div class="wrapper">
             <div class="services-inner">
                 <div class="services-header">
@@ -379,9 +390,10 @@
                 <div class="scroll"></div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="contact section" data-anchor="contact">
+    <section class="contact">
+        <h1>Контакты</h1>
         <div class="wrapper">
             <div class="contact-inner">
                 <div class="contact-body">
@@ -438,13 +450,15 @@
                 <div class="scroll"></div>
             </div>
         </div>
-    </div>
-</div>
-<!--  end fullpage  -->
+    </section>
+</main>
+<!--  end main  -->
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/scrolloverflow.js"></script>
-<script src="js/jquery.rcounter-1.js"></script>
+<script src="js/jquery.rcounter.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.pageScroll3d.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
 
