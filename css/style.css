@@ -399,17 +399,21 @@ h1 {
     width: 40%; }
 
 /* --- Header Start --- */
-.header {
+.home .header {
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 9; }
+  width: 100%; }
+
+.header {
+  position: relative;
+  width: 100%; }
   .header .wrapper {
     max-width: 1722px; }
   .header__inner {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    width: 100%; }
   .header__logo {
     margin-top: 10px; }
     .header__logo .mob {
@@ -1033,26 +1037,13 @@ a.s3d__navigation-link:hover {
       color: #221952;
       margin-top: 15px; }
   .advantages.advantages-single {
-    padding: 100px 0; }
+    padding: 0 0 20px; }
     .advantages.advantages-single .wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
       height: inherit;
       max-width: 1695px; }
-    .advantages.advantages-single .advantages-inner {
-      min-height: 80vh;
-      box-shadow: 5px 5px 25px #d3d1d7, -5px -5px 25px #ffffff;
-      overflow-y: auto;
-      padding: 120px 0 0;
-      box-sizing: border-box;
-      scrollbar-width: none; }
-      .advantages.advantages-single .advantages-inner::-webkit-scrollbar {
-        display: none; }
-    .advantages.advantages-single.advantages-video .advantages-inner {
-      box-shadow: unset;
-      height: 80vh;
-      padding: 0; }
 
 /* ---  Section Advantages End  --- */
 /* --- Section Services Start --- */
@@ -1136,16 +1127,9 @@ a.s3d__navigation-link:hover {
       color: #221952;
       margin-top: 15px; }
   .services-single {
-    padding: 100px 0; }
+    padding: 0 0 20px; }
     .services-single .services-inner {
       padding: 0; }
-    @media screen and (min-width: 768px) {
-      .services-single .services-body {
-        height: 80vh;
-        overflow-y: scroll;
-        scrollbar-width: none; }
-        .services-single .services-body::-webkit-scrollbar {
-          display: none; } }
 
 /* ---  Section Services End  --- */
 /* --- Section Contact Start --- */
@@ -1257,9 +1241,20 @@ a.s3d__navigation-link:hover {
     margin: 10px 0; }
     .contact .btn:hover {
       background: #EEEEF1; }
+  .contact-single .contact-inner {
+    height: auto;
+    margin: 60px 0;
+    padding: 0; }
+  .contact-single .contact-body {
+    height: auto;
+    align-items: unset; }
+  .contact-single .contact-info {
+    height: auto; }
   .contact-single .btn {
     color: #fff;
     background: linear-gradient(265.45deg, #155AA7 0%, #4095DE 27.59%, #241C52 101.88%); }
+    .contact-single .btn:hover {
+      background: linear-gradient(285.45deg, #155AA7 0%, #4095DE 27.59%, #241C52 101.88%); }
   .contact-single .contact-info {
     background: #fff; }
   .contact-single .sub-title {
@@ -1292,7 +1287,7 @@ a.s3d__navigation-link:hover {
     content: '';
     position: absolute;
     width: 25%;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: #EEEEF1;
     top: 0;
     left: 0; }
@@ -1312,18 +1307,22 @@ a.s3d__navigation-link:hover {
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    position: relative;
+    margin: 50px 0; }
     .uniqueness-body .bg {
       width: 30%;
-      height: 75vh;
+      height: 100%;
       background-image: url(../images/uniqueness_bg.png);
       background-repeat: no-repeat;
       background-position: right;
       background-size: cover;
-      position: relative; }
+      position: absolute;
+      right: 0;
+      top: 0; }
       .uniqueness-body .bg img {
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 0;
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
@@ -1441,15 +1440,13 @@ a.s3d__navigation-link:hover {
     width: 100%;
     margin: 10px 0; }
   .uniqueness-single {
-    padding: 100px 0; }
+    min-height: 100vh; }
     .uniqueness-single .uniqueness-inner {
       padding: 0;
-      height: 80vh; }
+      height: auto; }
     .uniqueness-single .uniqueness-info {
-      overflow-y: scroll;
-      scrollbar-width: none; }
-      .uniqueness-single .uniqueness-info::-webkit-scrollbar {
-        display: none; }
+      height: auto;
+      min-height: 75vh; }
     .uniqueness-single .uniqueness-body .bg img {
       height: auto; }
 
@@ -1458,23 +1455,8 @@ a.s3d__navigation-link:hover {
 .post {
   position: relative;
   background: #fff;
-  padding: 120px 0 100px;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box; }
-  .post .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: inherit;
-    position: absolute;
-    top: 2.5vh;
-    left: 50%;
-    max-width: 1660px;
-    -webkit-transform:  translateX(-50%);
-    -ms-transform:  translateX(-50%);
-    -moz-transform:  translateX(-50%);
-    -o-transform:  translateX(-50%);
-    transform:  translateX(-50%); }
   .post .title {
     font-size: 36px;
     line-height: 48px; }
@@ -1500,19 +1482,18 @@ a.s3d__navigation-link:hover {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    height: 100vh;
     box-sizing: border-box;
     position: relative;
     text-align: center;
     max-width: 1700px;
-    width: 100%; }
+    width: 100%;
+    padding: 50px 0; }
   .post-body {
     min-height: 80vh;
     background: #fff;
     box-shadow: 5px 5px 25px #D3D1D7, -5px -5px 25px #FFFFFF;
     border-radius: 10px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding-right: 65px;
     box-sizing: border-box; }
@@ -1524,13 +1505,6 @@ a.s3d__navigation-link:hover {
     flex-direction: column;
     padding: 60px 67px 15px;
     box-sizing: border-box; }
-    @media screen and (min-width: 1001px) {
-      .post-info {
-        height: 80vh;
-        overflow-y: scroll;
-        scrollbar-width: none; }
-        .post-info::-webkit-scrollbar {
-          display: none; } }
     .post-info .title {
       text-align: left;
       margin: 10px 0; }
@@ -1626,25 +1600,14 @@ a.s3d__navigation-link:hover {
     width: 100%;
     margin: 10px 0; }
   .post-single {
+    padding: 0;
     padding: 100px 0; }
     .post-single .uniqueness-inner {
       padding: 0;
       height: 80vh; }
-    .post-single .uniqueness-info {
-      overflow-y: scroll;
-      scrollbar-width: none; }
-      .post-single .uniqueness-info::-webkit-scrollbar {
-        display: none; }
   .post-more {
     width: 35%;
     margin-top: 75px; }
-    @media screen and (min-width: 1001px) {
-      .post-more {
-        height: 70vh;
-        overflow-y: scroll;
-        scrollbar-width: none; }
-        .post-more::-webkit-scrollbar {
-          display: none; } }
     .post-more__title {
       font: 600 24px/40px "FiraSans-Bold";
       letter-spacing: 0.05em;
@@ -2337,7 +2300,7 @@ a.s3d__navigation-link:hover {
 
   .company .description {
     padding-top: 0; }
-    .company .description:nth-child(1) {
+    .company .description-1 {
       padding-top: 300px; }
 
   .list-shadow__link {
