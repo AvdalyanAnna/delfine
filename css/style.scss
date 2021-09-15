@@ -1645,9 +1645,14 @@ a.s3d__navigation-link:hover {
         @media screen and (min-width: 768px) {
           height: 60vh;
         }
-        top: 30%;
+        top: 50%;
         left: 0;
         @include prefix-name('transform', 'translate(-50%, -50%)');
+      }
+      &-company{
+        img{
+          top: 30%;
+        }
       }
     }
   }

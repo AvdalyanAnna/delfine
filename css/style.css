@@ -1322,7 +1322,7 @@ a.s3d__navigation-link:hover {
       top: 0; }
       .uniqueness-body .bg img {
         position: absolute;
-        top: 30%;
+        top: 50%;
         left: 0;
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
@@ -1332,6 +1332,8 @@ a.s3d__navigation-link:hover {
         @media screen and (min-width: 768px) {
           .uniqueness-body .bg img {
             height: 60vh; } }
+      .uniqueness-body .bg-company img {
+        top: 30%; }
   .uniqueness-info {
     width: 70%;
     height: 75vh;
