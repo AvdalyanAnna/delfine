@@ -105,17 +105,19 @@
 
                     posActive = deg / 90;
 
-
                     if (posActive === 0) {
                         $('.header').removeClass('header-active')
                         $('.nav').removeClass('nav-active')
+                        $('.an_experience-list').removeClass('animated')
                     } else if(posActive === 2){
                         $('.header').addClass('header-active')
                         $('.nav').addClass('nav-active')
                         $('.counterUp').rCounter();
+                        $('.an_experience-list').addClass('animated')
                     } else {
                         $('.header').addClass('header-active')
                         $('.nav').addClass('nav-active')
+                        $('.an_experience-list').removeClass('animated')
                     }
 
                     sides.eq(posActive).addClass('active').siblings().removeClass('active');
@@ -139,26 +141,25 @@
                         navItem = _this.find('.s3d__navigation-item'),
                         posActive;
 
-
                     if (activeSide.next().length) {
                         deg += 90;
                     }
-
-
 
                     posActive = deg / 90;
 
                     if (posActive === 0) {
                         $('.header').removeClass('header-active')
                         $('.nav').removeClass('nav-active')
+                        $('.an_experience-list').removeClass('animated')
                     } else if(posActive === 2){
-
                         $('.header').addClass('header-active')
                         $('.nav').addClass('nav-active')
                         $('.counterUp').rCounter();
+                        $('.an_experience-list').addClass('animated')
                     } else {
                         $('.header').addClass('header-active')
                         $('.nav').addClass('nav-active')
+                        $('.an_experience-list').removeClass('animated')
                     }
 
                     sides.eq(posActive).addClass('active').siblings().removeClass('active');
@@ -189,13 +190,16 @@
                     if (posItem === 0) {
                         $('.header').removeClass('header-active')
                         $('.nav').removeClass('nav-active')
+                        $('.an_experience-list').removeClass('animated')
                     } else if(posItem === 2){
                         $('.header').addClass('header-active')
                         $('.nav').addClass('nav-active')
+                        $('.an_experience-list').addClass('animated')
                         $('.counterUp').rCounter();
                     } else {
                         $('.header').addClass('header-active')
                         $('.nav').addClass('nav-active')
+                        $('.an_experience-list').removeClass('animated')
                     }
 
                     navItem.addClass('active').siblings().removeClass('active');

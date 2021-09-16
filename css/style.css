@@ -225,34 +225,59 @@ h1 {
     padding-left: 25px; }
     .d-flex .right .description:nth-child(1) {
       margin-top: 0; }
+    .d-flex .right .description:nth-last-child(1) {
+      margin-bottom: 0; }
 
 .shadow {
   box-sizing: border-box;
-  padding: 24px 32px;
+  padding: 20px 32px;
   background: linear-gradient(136.4deg, #FCFEFF 0%, #FFFFFF 102.56%);
   box-shadow: 3px 3px 15px rgba(211, 209, 215, 0.6); }
 
 .company {
-  max-width: 850px;
+  max-width: 865px;
   width: 100%; }
-  .company .info,
-  .company .d-flex,
-  .company .sincerely,
-  .company .shadow {
+  .company .description {
+    margin: 32px 0; }
+  .company .info {
+    margin: 15px 0 50px; }
+  .company .sincerely {
+    margin: 70px 0 0; }
+  .company .d-flex {
     margin: 15px 0; }
+  .company .shadow {
+    margin: 55px 0 45px;
+    max-width: 800px; }
+    .company .shadow .description {
+      margin: 0;
+      line-height: 28px; }
+  .company-page .wrapper {
+    max-width: 1675px; }
+  .company-page .uniqueness-body {
+    margin: 15px 0 50px;
+    border-radius: 0;
+    box-shadow: unset; }
+    .company-page .uniqueness-body .bg {
+      height: 846px; }
+  .company-page .uniqueness-info {
+    padding: 130px 67px 36px 100px;
+    box-shadow: 5px 5px 25px #d3d1d7, -5px -5px 25px #ffffff; }
+    .company-page .uniqueness-info .title {
+      margin: 20px 0; }
 
 .list-shadow {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: -15px 0 -5px -5px; }
   .list-shadow__item {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 16px;
+    padding: 16px 20px;
     background: linear-gradient(136.4deg, #FCFEFF 0%, #FFFFFF 102.56%);
     box-shadow: 3px 3px 15px rgba(211, 209, 215, 0.6);
-    margin: 5px; }
+    margin: 5px 7px; }
     .list-shadow__item.no-shadow {
       box-shadow: unset;
       background: transparent;
@@ -402,7 +427,8 @@ h1 {
 .home .header {
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 9; }
 
 .header {
   position: relative;
@@ -767,9 +793,6 @@ a.s3d__navigation-link:hover {
     height: 100%;
     object-fit: contain; }
 
-.company .description {
-  margin: 15px 0; }
-
 .show-mobile {
   display: none !important; }
 
@@ -872,6 +895,10 @@ a.s3d__navigation-link:hover {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    .an_experience-list.animated .an_experience-item .bg,
+    .an_experience-list.animated .an_experience-item .bg-icon,
+    .an_experience-list.animated .an_experience-item .bg-progress {
+      animation: lds-dual-ring 2s linear; }
   .an_experience-item {
     max-width: 360px;
     width: 100%;
@@ -891,6 +918,12 @@ a.s3d__navigation-link:hover {
       background-repeat: no-repeat;
       background-position: center center;
       z-index: 1; }
+      .an_experience-item .bg svg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; }
       .an_experience-item .bg .bg-progress {
         position: absolute;
         width: 105%;
@@ -900,7 +933,10 @@ a.s3d__navigation-link:hover {
         top: -2%;
         background-repeat: no-repeat;
         background-size: contain;
-        animation: lds-dual-ring 2s linear infinite; }
+        animation: lds-dual-ring 2s linear; }
+        .an_experience-item .bg .bg-progress::before {
+          content: '';
+          position: absolute; }
       .an_experience-item .bg .bg-icon {
         position: absolute;
         width: 100%;
@@ -908,7 +944,7 @@ a.s3d__navigation-link:hover {
         left: 0;
         top: 0;
         z-index: 9;
-        animation: lds-dual-ring 2s linear infinite; }
+        animation: lds-dual-ring 2s linear; }
         .an_experience-item .bg .bg-icon:before {
           content: '';
           position: absolute;
@@ -955,13 +991,13 @@ a.s3d__navigation-link:hover {
       letter-spacing: 0.05px; }
     .an_experience-item-2 .bg .bg-progress,
     .an_experience-item-2 .bg .bg-icon {
-      animation: lds-dual-ring 2.5s linear infinite; }
+      transform: rotate(90deg); }
     .an_experience-item-3 .bg .bg-progress,
     .an_experience-item-3 .bg .bg-icon {
-      animation: lds-dual-ring 3s linear infinite; }
+      transform: rotate(180deg); }
     .an_experience-item-4 .bg .bg-progress,
     .an_experience-item-4 .bg .bg-icon {
-      animation: lds-dual-ring 3.5s linear infinite; }
+      transform: rotate(270deg); }
 
 /* ---  Section An Experience End  --- */
 /* --- Section Advantages Start --- */
@@ -1332,8 +1368,6 @@ a.s3d__navigation-link:hover {
         @media screen and (min-width: 768px) {
           .uniqueness-body .bg img {
             height: 60vh; } }
-      .uniqueness-body .bg-company img {
-        top: 30%; }
   .uniqueness-info {
     width: 70%;
     height: 75vh;
@@ -1730,6 +1764,14 @@ a.s3d__navigation-link:hover {
   .an_experience-item {
     max-width: 320px;
     min-height: 320px; } }
+@media screen and (max-width: 1600px) {
+  .home .header {
+    position: absolute;
+    width: 100%;
+    z-index: 9; }
+
+  .scroll {
+    display: none; } }
 @media screen and (max-width: 1439px) {
   .nav.active .nav__menu.show-mobile {
     display: flex !important; }
@@ -1821,7 +1863,19 @@ a.s3d__navigation-link:hover {
     padding: 0 22.5px 0 45px; }
   .post-info {
     width: 55%;
-    padding: 45px 22.5px 45px 45px; } }
+    padding: 45px 22.5px 45px 45px; }
+
+  .company-page .uniqueness-info {
+    padding: 50px; }
+
+  .company-info {
+    flex-direction: column; }
+    .company-info img {
+      max-width: 250px;
+      width: 100%;
+      margin-bottom: 25px; }
+    .company-info .right {
+      padding-left: 0; } }
 @media screen and (max-width: 1165px) {
   .an_experience-item .bg .bg-icon::before {
     left: -9%; }
@@ -2179,6 +2233,9 @@ a.s3d__navigation-link:hover {
         padding: 50px 15px 0; }
       .uniqueness-single-partners .description {
         padding-top: 325px; }
+
+  .company-page .uniqueness-body .bg {
+    height: 404px; }
 
   .partners-list {
     justify-content: space-around; }

@@ -167,42 +167,80 @@ h1 {
       &:nth-child(1) {
         margin-top: 0;
       }
+      &:nth-last-child(1){
+        margin-bottom: 0;
+      }
     }
   }
 }
 
 .shadow {
   box-sizing: border-box;
-  padding: 24px 32px;
+  padding: 20px 32px;
   background: linear-gradient(136.4deg, #FCFEFF 0%, #FFFFFF 102.56%);
   box-shadow: 3px 3px 15px rgba(211, 209, 215, 0.6);
 }
 
 .company {
-  max-width: 850px;
+  max-width: 865px;
   width: 100%;
-
-  .info,
-  .d-flex,
-  .sincerely,
-  .shadow {
+  .description {
+    margin: 32px 0;
+  }
+  .info{
+    margin: 15px 0 50px;
+  }
+  .sincerely{
+    margin: 70px 0 0;
+  }
+  .d-flex{
     margin: 15px 0;
+  }
+  .shadow{
+    margin: 55px 0 45px;
+    max-width: 800px;
+    .description{
+      margin: 0;
+      line-height: 28px;
+    }
+  }
+  &-page{
+    .wrapper{
+      max-width: 1675px;
+    }
+
+    .uniqueness-body{
+      margin: 15px 0 50px;
+      border-radius: 0;
+      box-shadow: unset;
+       .bg{
+         height: 846px;
+       }
+    }
+    .uniqueness-info{
+      padding: 130px 67px 36px 100px;
+      box-shadow: 5px 5px 25px #d3d1d7, -5px -5px 25px #ffffff;
+      .title{
+        margin: 20px 0;
+      }
+    }
   }
 }
 
 .list-shadow {
   display: flex;
   flex-wrap: wrap;
+  margin: -15px 0 -5px -5px;
 
   &__item {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 16px;
+    padding: 16px 20px;
     background: linear-gradient(136.4deg, #FCFEFF 0%, #FFFFFF 102.56%);
     box-shadow: 3px 3px 15px rgba(211, 209, 215, 0.6);
-    margin: 5px;
+    margin: 5px 7px;
 
     &.no-shadow {
       box-shadow: unset;
@@ -365,6 +403,7 @@ h1 {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 9;
 }
 .header {
   position: relative;
@@ -831,11 +870,6 @@ a.s3d__navigation-link:hover {
   }
 }
 
-.company {
-  .description {
-    margin: 15px 0;
-  }
-}
 
 .show-mobile {
   display: none !important;
@@ -976,6 +1010,15 @@ a.s3d__navigation-link:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &.animated{
+      .an_experience-item{
+        .bg,
+        .bg-icon,
+        .bg-progress{
+          animation: lds-dual-ring 2s linear ;
+        }
+      }
+    }
   }
 
   &-item {
@@ -998,6 +1041,13 @@ a.s3d__navigation-link:hover {
       background-repeat: no-repeat;
       background-position: center center;
       z-index: 1;
+      svg{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
       .bg-progress {
         position: absolute;
@@ -1008,8 +1058,24 @@ a.s3d__navigation-link:hover {
         top: -2%;
         background-repeat: no-repeat;
         background-size: contain;
-        animation: lds-dual-ring 2s linear infinite;
+        animation: lds-dual-ring 2s linear ;
+        &::before{
+          content: '';
+          position: absolute;
+          //width: 94.5%;
+          //height: 94.5%;
+          //left: 0;
+          //top: 0;
+          //border: 10px solid #DBDBDE;
+          //border-radius: 50%;
+          //background-color: #DBDBDE;
+          //background-image: url(../images/an_experience-fone__after-white.png);
+          //background-repeat: no-repeat;
+          //background-size: cover;
+          //animation: lds-dual-ring 2s linear infinite;
+        }
       }
+
 
       .bg-icon {
         &:before {
@@ -1031,7 +1097,7 @@ a.s3d__navigation-link:hover {
         left: 0;
         top: 0;
         z-index: 9;
-        animation: lds-dual-ring 2s linear infinite;
+        animation: lds-dual-ring 2s linear ;
       }
 
       @keyframes lds-dual-ring {
@@ -1093,7 +1159,7 @@ a.s3d__navigation-link:hover {
       .bg {
         .bg-progress,
         .bg-icon {
-          animation: lds-dual-ring 2.5s linear infinite;
+         transform: rotate(90deg);
         }
       }
     }
@@ -1102,7 +1168,7 @@ a.s3d__navigation-link:hover {
       .bg {
         .bg-progress,
         .bg-icon {
-          animation: lds-dual-ring 3s linear infinite;
+          transform: rotate(180deg);
         }
       }
     }
@@ -1111,7 +1177,7 @@ a.s3d__navigation-link:hover {
       .bg {
         .bg-progress,
         .bg-icon {
-          animation: lds-dual-ring 3.5s linear infinite;
+          transform: rotate(270deg);
         }
       }
     }
@@ -1648,11 +1714,6 @@ a.s3d__navigation-link:hover {
         top: 50%;
         left: 0;
         @include prefix-name('transform', 'translate(-50%, -50%)');
-      }
-      &-company{
-        img{
-          top: 30%;
-        }
       }
     }
   }
@@ -2286,6 +2347,18 @@ a.s3d__navigation-link:hover {
   }
 }
 
+@media screen and (max-width: 1600px){
+  .home .header{
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+  }
+
+  .scroll {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1439px){
   .nav.active .nav__menu.show-mobile {
     display: flex !important;
@@ -2386,6 +2459,7 @@ a.s3d__navigation-link:hover {
     display: none;
   }
 }
+
 @media screen and (max-width: 1430px) {
   .post .wrapper,
   .advantages.advantages-single .wrapper,
@@ -2435,6 +2509,22 @@ a.s3d__navigation-link:hover {
     &-info {
       width: 55%;
       padding: 45px 22.5px 45px 45px;
+    }
+  }
+  .company-page{
+     .uniqueness-info{
+       padding: 50px;
+     }
+  }
+  .company-info{
+    flex-direction: column;
+    img{
+      max-width: 250px;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    .right{
+      padding-left: 0;
     }
   }
 }
@@ -3019,6 +3109,9 @@ a.s3d__navigation-link:hover {
         }
       }
     }
+  }
+  .company-page .uniqueness-body .bg{
+    height: 404px;
   }
 
   .partners-list {
