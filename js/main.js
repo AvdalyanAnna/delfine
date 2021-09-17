@@ -35,9 +35,6 @@ $(function () {
         })
     }
 
-    // initiate full page scroll
-
-
     if ($('div').is('.preloader')) {
         setTimeout(() => {
             $('.preloader').css('transform', 'translateY(-100%)')
@@ -45,7 +42,9 @@ $(function () {
     }
 
     /*      Counter     */
-    $('.counterUp').rCounter();
+    if ($('div').is('.counterUp')) {
+        $('.counterUp').rCounter();
+    }
 
 
     var flag = false;
@@ -62,6 +61,9 @@ $(function () {
                 }
             }
         } else {
+            if ($('body').is('.home')) {
+                $('.main-content').scroll3D('destroy');
+            }
             if ($('.section_one').outerHeight() > window.scrollY) {
                 $('.header').removeClass('header-active')
                 $('.nav').removeClass('nav-active')
@@ -78,8 +80,5 @@ $(function () {
                 $('.an_experience-list').removeClass('animated')
             }
         }
-
-
-
     }
 });
