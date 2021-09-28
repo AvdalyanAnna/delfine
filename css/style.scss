@@ -94,7 +94,7 @@ h1 {
 
   &:hover {
     background: linear-gradient(285.45deg, #155AA7 0%, #4095DE 27.59%, #241C52 101.88%);
-    color:#fff;
+    color: #fff;
   }
 }
 
@@ -140,6 +140,10 @@ h1 {
   margin-bottom: 35px;
   display: block;
 
+  &-mob {
+    display: none;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -167,7 +171,8 @@ h1 {
       &:nth-child(1) {
         margin-top: 0;
       }
-      &:nth-last-child(1){
+
+      &:nth-last-child(1) {
         margin-bottom: 0;
       }
     }
@@ -184,43 +189,53 @@ h1 {
 .company {
   max-width: 865px;
   width: 100%;
+
   .description {
     margin: 32px 0;
   }
-  .info{
+
+  .info {
     margin: 15px 0 50px;
   }
-  .sincerely{
+
+  .sincerely {
     margin: 70px 0 0;
   }
-  .d-flex{
+
+  .d-flex {
     margin: 15px 0;
   }
-  .shadow{
+
+  .shadow {
     margin: 55px 0 45px;
     max-width: 800px;
-    .description{
+
+    .description {
       margin: 0;
       line-height: 28px;
     }
   }
-  &-page{
-    .wrapper{
+
+  &-page {
+    .wrapper {
       max-width: 1675px;
     }
 
-    .uniqueness-body{
+    .uniqueness-body {
       margin: 15px 0 50px;
       border-radius: 0;
       box-shadow: unset;
-       .bg{
-         height: 846px;
-       }
+
+      .bg {
+        height: 846px;
+      }
     }
-    .uniqueness-info{
+
+    .uniqueness-info {
       padding: 130px 67px 36px 100px;
       box-shadow: 5px 5px 25px #d3d1d7, -5px -5px 25px #ffffff;
-      .title{
+
+      .title {
         margin: 20px 0;
       }
     }
@@ -399,15 +414,18 @@ h1 {
 }
 
 /* --- Header Start --- */
-.home .header{
+.home .header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 9;
+  //min-height: 92px;
 }
+
 .header {
   position: relative;
   width: 100%;
+
   .wrapper {
     max-width: 1722px;
   }
@@ -620,10 +638,12 @@ h1 {
     font: bold 18px/40px $bold;
     letter-spacing: 0.05em;
   }
-  #fp-nav ul li, .s3d__navigation ul li{
+
+  #fp-nav ul li, .s3d__navigation ul li {
     max-width: 350px;
     width: 350px;
-    a{
+
+    a {
       font: bold 18px/40px $bold;
       letter-spacing: 0.05em;
       width: 350px;
@@ -822,6 +842,7 @@ a.s3d__navigation-link:hover {
     position: absolute;
     width: 100%;
     height: 100%;
+    left: 0;
 
     &.youtube {
       background-image: url(../images/sprite.svg#youtube);
@@ -839,7 +860,7 @@ a.s3d__navigation-link:hover {
 
 .partners {
   &-list {
-    max-width: 85%;
+    max-width: 800px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -851,9 +872,9 @@ a.s3d__navigation-link:hover {
     justify-content: center;
     align-items: center;
     padding: 16px;
-    max-width: 125px;
+    max-width: 18%;
     width: 100%;
-    height: 60px;
+    height: 84px;
     background: linear-gradient(136.4deg, #FCFEFF 0%, #FFFFFF 102.56%);
     box-shadow: 3px 3px 15px rgba(211, 209, 215, 0.6);
     box-sizing: border-box;
@@ -1010,12 +1031,13 @@ a.s3d__navigation-link:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &.animated{
-      .an_experience-item{
+
+    &.animated {
+      .an_experience-item {
         .bg,
         .bg-icon,
-        .bg-progress{
-          animation: lds-dual-ring 2s linear ;
+        .bg-progress {
+          animation: lds-dual-ring 2s linear;
         }
       }
     }
@@ -1041,7 +1063,8 @@ a.s3d__navigation-link:hover {
       background-repeat: no-repeat;
       background-position: center center;
       z-index: 1;
-      svg{
+
+      svg {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -1058,8 +1081,9 @@ a.s3d__navigation-link:hover {
         top: -2%;
         background-repeat: no-repeat;
         background-size: contain;
-        animation: lds-dual-ring 2s linear ;
-        &::before{
+        animation: lds-dual-ring 2s linear;
+
+        &::before {
           content: '';
           position: absolute;
           //width: 94.5%;
@@ -1097,7 +1121,7 @@ a.s3d__navigation-link:hover {
         left: 0;
         top: 0;
         z-index: 9;
-        animation: lds-dual-ring 2s linear ;
+        animation: lds-dual-ring 2s linear;
       }
 
       @keyframes lds-dual-ring {
@@ -1159,7 +1183,7 @@ a.s3d__navigation-link:hover {
       .bg {
         .bg-progress,
         .bg-icon {
-         transform: rotate(90deg);
+          transform: rotate(90deg);
         }
       }
     }
@@ -1297,7 +1321,7 @@ a.s3d__navigation-link:hover {
     }
 
     p {
-      font: 600 20px/32px $bold;
+      font: 600 19px/32px $bold;
       letter-spacing: 0.05em;
       color: #221952;
       margin-top: 15px;
@@ -1431,6 +1455,10 @@ a.s3d__navigation-link:hover {
     .services-inner {
       padding: 0;
     }
+
+    .services-item {
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -1513,7 +1541,7 @@ a.s3d__navigation-link:hover {
     letter-spacing: 0.05em;
     color: #FFFFFF;
     position: relative;
-    padding-left: 40px;
+    padding-left: 45px;
     padding-bottom: 10px;
     margin: 15px 0;
 
@@ -1590,22 +1618,26 @@ a.s3d__navigation-link:hover {
   }
 
   &-single {
-    .contact-inner{
+    .contact-inner {
       height: auto;
       margin: 60px 0;
       padding: 0;
     }
-    .contact-body{
+
+    .contact-body {
       height: auto;
       align-items: unset;
     }
-    .contact-info{
+
+    .contact-info {
       height: auto;
     }
+
     .btn {
       color: #fff;
       background: linear-gradient(265.45deg, #155AA7 0%, #4095DE 27.59%, #241C52 101.88%);
-      &:hover{
+
+      &:hover {
         background: linear-gradient(285.45deg, #155AA7 0%, #4095DE 27.59%, #241C52 101.88%);
       }
     }
@@ -1656,6 +1688,19 @@ a.s3d__navigation-link:hover {
   }
 }
 
+.facebook {
+  .icon {
+    left: 4px;
+  }
+}
+
+.youtube {
+  .icon {
+    left: -4px;
+    top: -9px;
+  }
+}
+
 /* ---  Section Contact End  --- */
 
 /* --- Section Uniqueness Start --- */
@@ -1695,6 +1740,7 @@ a.s3d__navigation-link:hover {
     justify-content: space-between;
     position: relative;
     margin: 50px 0;
+
     .bg {
       width: 30%;
       height: 100%;
@@ -1873,7 +1919,8 @@ a.s3d__navigation-link:hover {
       padding: 0;
       height: auto;
     }
-    .uniqueness-info{
+
+    .uniqueness-info {
       height: auto;
       min-height: 75vh;
     }
@@ -2323,16 +2370,16 @@ a.s3d__navigation-link:hover {
     left: 35%;
   }
 
-  .partners {
-    &-list {
-      max-width: 100%;
-    }
-
-    &-item {
-      max-width: 132px;
-      height: 80px;
-    }
-  }
+  //.partners {
+  //  &-list {
+  //    max-width: 100%;
+  //  }
+  //
+  //  &-item {
+  //    max-width: 132px;
+  //    height: 80px;
+  //  }
+  //}
 
   .post-more__info-title {
     font-size: 20px;
@@ -2347,8 +2394,8 @@ a.s3d__navigation-link:hover {
   }
 }
 
-@media screen and (max-width: 1600px){
-  .home .header{
+@media screen and (max-width: 1600px) {
+  .home .header {
     position: absolute;
     width: 100%;
     z-index: 9;
@@ -2357,9 +2404,16 @@ a.s3d__navigation-link:hover {
   .scroll {
     display: none;
   }
+  .home .header__logo {
+    margin: 0;
+
+    img {
+      height: 64px;
+    }
+  }
 }
 
-@media screen and (max-width: 1439px){
+@media screen and (max-width: 1439px) {
   .nav.active .nav__menu.show-mobile {
     display: flex !important;
   }
@@ -2429,6 +2483,7 @@ a.s3d__navigation-link:hover {
     padding: 0 0 60px;
     box-sizing: border-box;
     scrollbar-width: none;
+    text-align: left;
 
     &::-webkit-scrollbar {
       display: none;
@@ -2442,6 +2497,7 @@ a.s3d__navigation-link:hover {
   .nav {
     min-height: 72px;
     background-color: transparent;
+    position: absolute;
 
     &__menu,
     &__social {
@@ -2457,6 +2513,26 @@ a.s3d__navigation-link:hover {
 
   .scroll {
     display: none;
+  }
+  .services-list {
+    margin-top: 50px;
+  }
+  .services-item {
+    margin: 50px 2px 50px;
+  }
+  .advantages {
+    &-list {
+      justify-content: space-around;
+    }
+
+    &-item {
+      max-width: 250px;
+
+      p {
+        font: 600 18px/28px "FiraSans-Bold";
+        min-height: 64px;
+      }
+    }
   }
 }
 
@@ -2478,19 +2554,76 @@ a.s3d__navigation-link:hover {
     &-list {
       max-width: calc(100% + 20px);
       flex-wrap: wrap;
-      justify-content: flex-start;
-      overflow: hidden;
       margin: 10px 0 10px -10px;
     }
 
     &-item {
-      max-width: 120px;
-      margin: 5px 10px;
-
+      height: 72px;
     }
   }
   .news-item {
     max-width: 45%;
+  }
+
+  .an_experience {
+    &-list {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    &-item {
+      max-width: 250px;
+      min-height: 250px;
+      margin: 5px 0;
+
+      p {
+        font: 500 14px/16px "FiraSans-Medium";
+        max-width: 150px;
+      }
+
+      .number {
+        font-size: 56px;
+
+        span {
+          font-size: 14px;
+        }
+      }
+
+      &-1 .number span {
+        bottom: -31px;
+        top: auto;
+        height: auto;
+        left: 12px;
+      }
+
+      &-2,
+      &-3 {
+        .number span {
+          bottom: -31px;
+          top: auto;
+          height: auto;
+          left: -25px;
+        }
+      }
+
+      &-4 {
+        p {
+          margin-top: 0;
+        }
+
+        .number {
+          padding-top: 25px;
+
+          span {
+            top: 0;
+          }
+        }
+      }
+
+      .bg .bg-icon:before {
+        left: -8.7%;
+      }
+    }
   }
 }
 
@@ -2511,19 +2644,21 @@ a.s3d__navigation-link:hover {
       padding: 45px 22.5px 45px 45px;
     }
   }
-  .company-page{
-     .uniqueness-info{
-       padding: 50px;
-     }
+  .company-page {
+    .uniqueness-info {
+      padding: 50px;
+    }
   }
-  .company-info{
+  .company-info {
     flex-direction: column;
-    img{
+
+    img {
       max-width: 250px;
       width: 100%;
       margin-bottom: 25px;
     }
-    .right{
+
+    .right {
       padding-left: 0;
     }
   }
@@ -2568,12 +2703,16 @@ a.s3d__navigation-link:hover {
       margin: 5px 0;
 
       p {
-        font: 500 16px/20px "FiraSans-Medium";
-        max-width: 180px;
+        font: 500 14px/16px "FiraSans-Medium";
+        max-width: 150px;
       }
 
       .number {
         font-size: 56px;
+
+        span {
+          font-size: 14px;
+        }
       }
 
       &-1 .number span {
@@ -2726,6 +2865,20 @@ a.s3d__navigation-link:hover {
       line-height: 28px;
     }
   }
+  .partners {
+    &-list {
+      justify-content: flex-start;
+    }
+
+    &-item {
+      height: 72px;
+      max-width: 140px;
+      margin: 10px 5px;
+      img{
+        max-height: 71px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -2739,6 +2892,7 @@ a.s3d__navigation-link:hover {
 
     .description {
       line-height: 28px;
+      font-size: 14px;
     }
 
     .info {
@@ -2808,10 +2962,8 @@ a.s3d__navigation-link:hover {
     &-body {
       padding-right: 0;
       flex-direction: column;
-      height: 80vh;
+      height: auto;
       display: block;
-      overflow-y: scroll;
-      scrollbar-width: none;
 
       &::-webkit-scrollbar {
         display: none;
@@ -2822,7 +2974,7 @@ a.s3d__navigation-link:hover {
       margin-top: 0;
       width: 100%;
       height: auto;
-      padding: 0 22.5px 0 45px;
+      padding: 0 35px;
       box-sizing: border-box;
 
       &__info-title {
@@ -2862,7 +3014,9 @@ a.s3d__navigation-link:hover {
       }
     }
   }
-
+  .nav {
+    position: absolute;
+  }
   .post .wrapper,
   .advantages.advantages-single .wrapper,
   .wrapper {
@@ -2896,11 +3050,21 @@ a.s3d__navigation-link:hover {
     background-image: url(../images/sprite.svg#an_experience-sub-title-mob);
   }
 
+  .an_experience-header .sub-title {
+    max-width: 46px;
+    height: 8px;
+    background-image: url(../images/sprite.svg#an_experience-sub-title-mob);
+  }
+
   .back {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 9;
+    display: none;
+
+    &-mob {
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+    }
   }
 
   .btn {
@@ -2987,8 +3151,6 @@ a.s3d__navigation-link:hover {
       content: unset;
     }
 
-
-
     .bg {
       img {
         max-width: 160px;
@@ -3024,7 +3186,7 @@ a.s3d__navigation-link:hover {
     &-info {
       width: 100%;
       padding: 75px 15px 0;
-      min-height: 1065px;
+      height: auto;
 
       .description {
         padding-top: 300px;
@@ -3034,7 +3196,7 @@ a.s3d__navigation-link:hover {
 
       .info {
         position: relative;
-        height: 156px;
+        height: 90px;
         background: transparent;
         padding-top: 100px;
         display: block;
@@ -3059,7 +3221,7 @@ a.s3d__navigation-link:hover {
         }
 
         .text {
-          font: 600 24px/24px $bold;
+          font: 600 18px/24px $bold;
           text-align: center;
           letter-spacing: 0.05em;
           padding: 0 10px;
@@ -3077,7 +3239,7 @@ a.s3d__navigation-link:hover {
     }
 
     &-inner {
-      padding: 80px 0;
+      padding: 25px 0;
     }
 
     &-single {
@@ -3110,28 +3272,26 @@ a.s3d__navigation-link:hover {
       }
     }
   }
-  .company-page .uniqueness-body .bg{
+  .company-page .uniqueness-body .bg {
     height: 404px;
   }
 
-  .partners-list {
-    justify-content: space-around;
-  }
 
   .an_experience {
 
     &-inner {
-      padding: 80px 0;
+      padding: 25px 0;
     }
 
     &-item {
-      max-width: 256px;
-      min-height: 256px;
+      max-width: 270px;
+      min-height: 270px;
 
       p {
         font-size: 12px;
         line-height: 18px;
         max-width: 140px;
+        margin-top: 15px;
       }
 
       .number {
@@ -3160,13 +3320,16 @@ a.s3d__navigation-link:hover {
 
         p {
           margin-top: 25px;
+          max-width: 160px;
         }
       }
     }
   }
+  .advantages-inner {
+    padding: 40px 0;
+  }
 
   .advantages {
-
     &-list {
       flex-direction: column;
     }
@@ -3190,6 +3353,7 @@ a.s3d__navigation-link:hover {
         height: auto;
         padding-left: 24px;
         margin-top: 0;
+        min-height: auto;
       }
     }
   }
@@ -3201,7 +3365,7 @@ a.s3d__navigation-link:hover {
     }
 
     &-inner {
-      padding: 80px 0;
+      padding: 25px 0;
       min-height: auto;
     }
 
@@ -3227,6 +3391,10 @@ a.s3d__navigation-link:hover {
           top: -40px;
         }
       }
+    }
+
+    &-list {
+      margin-top: 0;
     }
   }
 
@@ -3263,6 +3431,7 @@ a.s3d__navigation-link:hover {
 
     &-inner {
       height: auto;
+      padding: 40px 0;
     }
 
     &-body {
@@ -3415,6 +3584,7 @@ a.s3d__navigation-link:hover {
       padding-left: 0;
       padding-top: 85px;
 
+
       &::before {
         content: '';
         position: absolute;
@@ -3450,7 +3620,13 @@ a.s3d__navigation-link:hover {
       }
     }
 
+    &-info {
+      padding: 25px;
+    }
+
     &-more {
+      padding: 25px;
+
       &__title {
         font-size: 18px;
         line-height: 21.6px;
@@ -3523,10 +3699,35 @@ a.s3d__navigation-link:hover {
   }
 
   .an_experience-item .bg .bg-icon::before {
-    left: -8.5%;
+    left: -8%;
   }
   .nav__menu-1,
   .fp-scrollable {
     display: none;
+  }
+  .advantages-header .title,
+  .services-header .title,
+  .uniqueness-info .title,
+  .contact-info .title,
+  .an_experience-header .title {
+    margin: 0 0 20px;
+  }
+  .partners{
+    &-list{
+      margin: 30px 0 10px;
+    }
+    &-item{
+      max-width: 45%;
+    }
+  }
+  .uniqueness-single .title{
+    font-size: 24px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .uniqueness-info .description {
+    padding-top: 300px;
   }
 }
